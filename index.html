@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luiza Martins – Psicóloga Clínica</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
   <link href="" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="./assets/js/textAnimation.js">
 </head>
+
 <body>
 
-  <header>
-    <h1>Luiza Martins – Psicóloga Clínica (CRP 00/0000)</h1>
+  <header class="header">
+    <div class="logo">
+      <img src="./assets/icons/whatsapp.png" alt="Logo Luiza Martins">
+      <h1> Psi Luiza Martins</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#como-funciona">Atendimento</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="hero">
-    <img src="luiza.PNG" alt="Foto da Psi Luiza Martins">
-    <h2>"Cuidar da mente é um ato de coragem."</h2>
-    <button>Agende sua consulta</button>
+    <div class="hero-image">
+      <img src="./assets/img/luiza.PNG" alt="Foto da Psi Luiza Martins">
+    </div>
+    <div class="hero-content">
+      <h1>Luiza Martins – Psicóloga Clínica <br> (CRP 00/0000)</h1>
+      <h2 class="typewriter">"Cuidar da mente é um ato de coragem."</h2>
+      <button onclick="window.location.href='#contato'">Agende sua consulta</button>
+    </div>
   </div>
 
-  <section class="sobre">
+  <section id="sobre" class="sobre">
     <h3>Sobre mim</h3>
-    <p>Olá, sou a Luiza, psicóloga formada pela Uniube com foco em psicánalise. Atendo adultos, autoestima e relacionamentos.</p>
+    <p>Olá, sou a Luiza, psicóloga formada pela Uniube com foco em psicánalise. Atendo adultos, autoestima e
+      relacionamentos.</p>
+   
   </section>
 
-  <section class="areas">
+  <section id="areas" class="areas">
     <h3>Áreas de Atuação</h3>
     <ul>
       <li>Ansiedade</li>
@@ -34,29 +56,42 @@
     </ul>
   </section>
 
-  <section class="como-funciona">
+  <section id="como-funciona" class="como-funciona">
     <h3>Como funciona o atendimento</h3>
     <p>Atendimentos online e presenciais (Uberaba - MG)<br>
-       Sessões de 50 minutos<br>
-       Valores acessíveis – consulte pelo WhatsApp
+      Sessões de 50 minutos<br>
+      Valores acessíveis – consulte pelo WhatsApp
     </p>
-    <button>Falar pelo WhatsApp</button>
+    <button onclick="window.open('https://wa.me/553497793048', '_blank')">Falar pelo WhatsApp</button>
   </section>
-
-  <section class="contato">
+  <section id="contato" class="contato">
     <h3>Contato</h3>
-    <form>
-      <input type="text" placeholder="Seu nome" required><br>
-      <input type="email" placeholder="Seu email" required><br>
-      <textarea placeholder="Sua mensagem" required></textarea><br>
+    <form action="https://formsubmit.co/luizammalves@gmail.com" method="POST">
+
+      <input type="text" name="nome" placeholder="Seu nome" required><br>
+
+      <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" required><br>
+
+      <input type="email" name="email" placeholder="Seu email" required><br>
+
+      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea><br>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/"> <!-- ou página de agradecimento -->
+
       <button type="submit">Enviar mensagem</button>
     </form>
   </section>
+  <script href="./assets/js/form.js"></script>
 
   <footer>
-    <p>📧 luiza@gmail.com | 📱 Instagram | WhatsApp | LinkedIn</p>
+    <p>E-mail - luizammalves@gmail.com | Instagram - | WhatsApp - 34 9 9779-3048 </p>
     <p>CRP 00/0000 | Política de Privacidade</p>
   </footer>
-
+  <button class="fab" onclick="window.open('https://wa.me/553497793048', '_blank')" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </button>
 </body>
+
+
 </html>
